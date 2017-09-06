@@ -1,5 +1,10 @@
 # Heart Failure Prediction using RNN
-This is a simple RNN (implemented with Gated Recurrent Units) for predicting a HF diagnosis given patient records.
+
+Recurrent neural network leveraged for early detection of heart failure. 
+
+1-year prediction window, 2-year observation window.
+
+## GRU: 4 variations
 There are four different versions.
 
 1. gru_onehot.py: This uses one-hot encoding for the medical code embedding
@@ -14,10 +19,10 @@ The data are synthetic and make no sense at all. It is intended only for testing
 3. labels.pkl: This is a pickled list of 0 and 1s.
 4. emb.pkl: This is a randomly generated code embedding of size 100 X 100
 
-# Requirement
+## Requirement
 Python and Theano are required to run the scripts
 
-# How to Execute
+## How to Execute
 1. python gru_onehot.py sequences.pkl labels.pkl <output>
 2. python gru_onehot_time.py sequences.pkl times.pkl labels.pkl <output>
 3. python gru_emb.py sequences.pkl labels.pkl emb.pkl <output>
