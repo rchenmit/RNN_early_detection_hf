@@ -57,14 +57,17 @@ num_pts_total = int(len(l_labels))
 num_pts_0 = int(len(l_labels_0))
 num_pts_1 = int(len(l_labels_1))
 
-l_pcts_pick = [0.005, 0.02, 0.035, 0.1, 0.2, 0.3,0.4,0.5,0.6,0.7,0.8,0.9]
+print "num patients 0: ", num_pts_0
+print "num patients 1: ", num_pts_1
+
+l_pcts_pick = [ 0.02, 0.035, 0.1, 0.2, 0.3,0.4,0.5,0.6,0.7,0.8,0.9]
 
 for pct in l_pcts_pick:
 	num_pick_0 = np.floor(pct * num_pts_0)
 	num_pick_1 = np.floor(pct * num_pts_1)
 	
-	l_idx_0 = np.random.choice(l_labels_0, num_pick_0)
-	l_idx_1 = np.random.choice(l_labels_1, num_pick_1)
+	l_idx_0 = np.random.choice(l_labels_0, num_pick_0, replace = False)
+	l_idx_1 = np.random.choice(l_labels_1, num_pick_1, replace = False)
 
 	# sequences
 	l_seqs_this = []
