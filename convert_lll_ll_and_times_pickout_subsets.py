@@ -50,14 +50,14 @@ pickle.dump(ll_times, open(file_save_ll_t_new, 'wb'))
 ## make subsets (keep same ratio of case and control)
 
 ### find which ones are case (1) and which control (0)
-l_labels_0 = np.where(l_labels==0)[0]
-l_labels_1 = np.where(l_labels==1)[0]
+nparr_labels = np.array(l_labels)
+l_labels_0 = np.where(nparr_labels==0)[0]
+l_labels_1 = np.where(nparr_labels==1)[0]
 
 num_pts_total = int(len(l_labels))
 num_pts_0 = int(len(l_labels_0))
 num_pts_1 = int(len(l_labels_1))
 
-print l_labels
 print "num patients 0: ", num_pts_0
 print "num patients 1: ", num_pts_1
 
