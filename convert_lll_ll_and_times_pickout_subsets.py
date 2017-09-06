@@ -3,10 +3,10 @@
 import numpy as np
 import cPickle as pickle
 
-file_lll_seqs = 'data/2_1_outpatient_social_DISCRETE.p.seqs'
-file_l_labels = 'data/2_1_outpatient_social_DISCRETE.p.labels'
-file_save_ll_seqs_new = 'data/2_1_outpatient_social_DISCRETE.p.seqs.ll'
-file_save_ll_t_new = 'data/2_1_outpatient_social_DISCRETE.p.times.ll'
+file_lll_seqs = 'data/2_1_outpatient_De_V_Di_M_S.p.seqs'
+file_l_labels = 'data/2_1_outpatient_De_V_Di_M_S.p.labels'
+file_save_ll_seqs_new = 'data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll'
+file_save_ll_t_new = 'data/2_1_outpatient_De_V_Di_M_S.p.times.ll'
 
 
 with open(file_lll_seqs, 'rb') as f:
@@ -24,12 +24,7 @@ f.close()
 ll_seqs_new = []
 ll_times = []
 
-cnt = 0
 for ll in lll_seqs:
-	cnt += 1
-	if np.mod(cnt, 100) ==0:
-		print cnt
-
 	l_new = []
 	l_t = []
 	t = 0
@@ -81,6 +76,29 @@ for pct in l_pcts_pick:
 	for idx in l_idx_1:
 		l_seqs_this.append(ll_seqs_new[idx])
                 l_labels_new.append(1)
+
+        # count new features and re-label
+        l_fx_all = []
+        for l_this_pt in l_seqs_this:
+                for fx_idx in l_this_pt:
+                        if not (fx_idx in l_fx_all):
+                                l_fx_all.append(fx_idx)
+        print l_fx_all####
+
+        d_origIdx_newIdx = dict()
+        for cnt in range(len(l_fx_all)):
+                d_origIdx_newIdx[ l_fx_all[cnt] ] = cnt
+        
+        num_fx_this_subset = len(l_fx_all)
+        print 'num fx this subset: ' , num_fx_this_subset
+
+        # re-name indexes
+        for p in range(len(l_seqs_this)):
+                for j in range(len(l_seqs_this[p])):
+                        l_seqs_this[p][j] = d_origIdx_newIdx[ l_seqs_this[p][j] ]
+                
+                
+
 
 	# times
 	l_times_this = []
