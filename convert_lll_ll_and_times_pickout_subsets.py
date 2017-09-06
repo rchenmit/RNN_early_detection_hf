@@ -57,6 +57,7 @@ num_pts_total = int(len(l_labels))
 num_pts_0 = int(len(l_labels_0))
 num_pts_1 = int(len(l_labels_1))
 
+print l_labels
 print "num patients 0: ", num_pts_0
 print "num patients 1: ", num_pts_1
 
