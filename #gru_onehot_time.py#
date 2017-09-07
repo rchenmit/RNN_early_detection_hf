@@ -57,7 +57,7 @@ def gru_layer(tparams, emb, options, mask=None):
 	hiddenDimSize = options['hiddenDimSize']
 	timesteps = emb.shape[0]
 	if emb.ndim == 3: n_samples = emb.shape[1]
-	else: n_samples = 1
+v	else: n_samples = 1
 
 	def stepFn(stepMask, wx, h, U_gru):
 		uh = T.dot(h, U_gru)
@@ -264,8 +264,7 @@ if __name__ == '__main__':
 	timeFile = sys.argv[2]
 	labelFile = sys.argv[3]
 	outFile = sys.argv[4]
-        inputDimSize = int(sys.argv[5])
-        
+        inputDimSize = sys.argv[5]
 
 #	inputDimSize = 570 #The number of unique medical codes
 	hiddenDimSize = 100 #The size of the hidden layer of the GRU

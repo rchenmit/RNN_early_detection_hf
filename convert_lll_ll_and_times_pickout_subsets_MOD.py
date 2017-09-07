@@ -63,65 +63,17 @@ for pct in l_pcts_pick:
 	num_pick_0 = int(np.floor(pct * num_pts_0))
 	num_pick_1 = int( np.floor(pct * num_pts_1))
 
-	l_idx_0 = list(np.random.choice(l_labels_0, num_pick_0, replace = False))
-	l_idx_1 = list(np.random.choice(l_labels_1, num_pick_1, replace = False))
+        num_pick_total = int(np.floor(pct * num_pts_total))
 
-        l_idx_0 = l_labels_0[0:num_pick_0]
-        l_idx_1 = l_labels_1[0:num_pick_1]
 
-        print np.unique(l_idx_0)
-        print np.unique(l_idx_1)
-
- #       print l_idx_0
- #       print l_idx_1
- #       for item in l_idx_1:
- #               print item in l_labels_1
- #       sys.exit('fdas')
-
-        # labels 
+        l_times_this = []
+        l_seqs_this = []
         l_labels_new = []
 
-	# sequences
-	l_seqs_this = []
-	for idx0 in l_idx_0:
-		l_seqs_this.append(ll_seqs_new[idx0])
-                l_labels_new.append(0)
-	for idx1 in l_idx_1:
-		l_seqs_this.append(ll_seqs_new[idx1])
-                l_labels_new.append(1)
-
-        # count new features and re-label
-#        l_fx_all = []
-#        for l_this_pt in l_seqs_this:
-#                for fx_idx in l_this_pt:
-#                        if not (fx_idx in l_fx_all):
-#                                l_fx_all.append(fx_idx)
-#        print l_fx_all####
-#
-#        d_origIdx_newIdx = dict()
-#        for cnt in range(len(l_fx_all)):
-#                d_origIdx_newIdx[ l_fx_all[cnt] ] = cnt
-                
-
-#        num_fx_this_subset = len(l_fx_all)
-#        print 'num fx this subset: ' , num_fx_this_subset
-
-#        # re-name indexes
-#        for p in range(len(l_seqs_this)):
-#                for j in range(len(l_seqs_this[p])):
-#                        l_seqs_this[p][j] = d_origIdx_newIdx[ l_seqs_this[p][j] ]
-                
-
-	# times
-	l_times_this = []
-	for idx in l_idx_0:
-		l_times_this.append(ll_times[idx])
-	for idx in l_idx_1:
-		l_times_this.append(ll_times[idx])	
-
-#        print l_times_this
-#        print len(l_labels_new), len(l_times_this), len(l_seqs_this)
-
+        for p in range(num_pick_total):
+                l_times_this.append(ll_times[p])
+                l_seqs_this.append(ll_seqs_new[p])
+                l_labels_new.append(l_labels[p])
 
 	# new save filenames
 	seqs_this_save_name = file_save_ll_seqs_new + '.subset_' + str(pct)

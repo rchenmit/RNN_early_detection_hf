@@ -119,6 +119,7 @@ for pct in l_pcts_pick:
 	for idx in l_idx_1:
 		l_times_this.append(ll_times[idx])	
 
+
 #        print l_times_this
 #        print len(l_labels_new), len(l_times_this), len(l_seqs_this)
 
