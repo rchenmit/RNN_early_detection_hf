@@ -3,10 +3,10 @@
 import numpy as np
 import cPickle as pickle
 
-file_lll_seqs = 'data/2_1_outpatient_De_V_Di_M_S.p.seqs'
-file_l_labels = 'data/2_1_outpatient_De_V_Di_M_S.p.labels'
-file_save_ll_seqs_new = 'data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll'
-file_save_ll_t_new = 'data/2_1_outpatient_De_V_Di_M_S.p.times.ll'
+file_lll_seqs = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.seqs'
+file_l_labels = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.labels'
+file_save_ll_seqs_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.seqs.ll'
+file_save_ll_t_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.times.ll'
 
 
 with open(file_lll_seqs, 'rb') as f:
@@ -57,7 +57,8 @@ num_pts_1 = int(len(l_labels_1))
 print "num patients 0: ", num_pts_0
 print "num patients 1: ", num_pts_1
 
-l_pcts_pick = [ 0.02, 0.035, 0.1, 0.2, 0.3,0.4,0.5,0.6,0.7,0.8,0.9]
+#l_pcts_pick = [ 0.02, 0.035, 0.1, 0.2, 0.3,0.4,0.5,0.6,0.7,0.8,0.9, 1]
+l_pcts_pick = [  1]
 
 for pct in l_pcts_pick:
 	num_pick_0 = int(np.floor(pct * num_pts_0))
