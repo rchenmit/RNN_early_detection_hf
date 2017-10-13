@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_16.result_subset_1_iter_1 570 1 16
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_16.result_subset_1_iter_2 570 1 16
+python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_16.result_subset_1_iter_3 570 1 16
+python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_16.result_subset_1_iter_4 570 1 16
+python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_16.result_subset_1_iter_5 570 1 16
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_32.result_subset_1_iter_1 570 1 32
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_32.result_subset_1_iter_2 570 1 32
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_32.result_subset_1_iter_3 570 1 32
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_64.result_subset_1_iter_1 570 1 64
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_64.result_subset_1_iter_2 570 1 64
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_64.result_subset_1_iter_3 570 1 64
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_200.result_subset_1_iter_1 570 1 200
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_200.result_subset_1_iter_2 570 1 200
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_200.result_subset_1_iter_3 570 1 200
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_300.result_subset_1_iter_1 570 1 300
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_300.result_subset_1_iter_2 570 1 300
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_300.result_subset_1_iter_3 570 1 300
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_400.result_subset_1_iter_1 570 1 400
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_400.result_subset_1_iter_2 570 1 400
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_400.result_subset_1_iter_3 570 1 400
+
+
+
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_100.result_subset_.1_iter_1 570 1 256
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_100.result_subset_.1_iter_2 570 1 256
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_100.result_subset_.1_iter_3 570 1 256
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_100.result_subset_.1_iter_4 570 1 256
+#python gru_onehot_time.py data/2_1_outpatient_De_V_Di_M_S.p.seqs.ll data/2_1_outpatient_De_V_Di_M_S.p.times.ll data/2_1_outpatient_De_V_Di_M_S.p.labels results/2_1_outpatient_De_V_Di_M_S_hidden_100.result_subset_.1_iter_5 570 1 256
+

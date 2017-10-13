@@ -99,20 +99,23 @@ def build_model(tparams, options, Wemb):
 
 	return use_noise, x, t, mask, y, p_y_given_x, cost
 
-def load_data(seqFile, labelFile, timeFile=''):
+def load_data(seqFile, labelFile, timeFile='', subset_size=1):
 	sequences = np.array(pickle.load(open(seqFile, 'rb')))
 	labels = np.array(pickle.load(open(labelFile, 'rb')))
 	if len(timeFile) > 0:
 		times = np.array(pickle.load(open(timeFile, 'rb')))
 
-	dataSize = len(labels)
-	ind = np.random.permutation(dataSize)
+	dataSize_orig = len(labels)
+        dataSize = int( np.floor(len(labels) * subset_size))
+
+	ind = np.random.permutation(dataSize_orig)
 	nTest = int(0.10 * dataSize)
 	nValid = int(0.10 * dataSize)
 
 	test_indices = ind[:nTest]
 	valid_indices = ind[nTest:nTest+nValid]
-	train_indices = ind[nTest+nValid:]
+#	train_indices = ind[nTest+nValid:]
+	train_indices = ind[nTest+nValid:dataSize]
 
 	train_set_x = sequences[train_indices]
 	train_set_y = labels[train_indices]
@@ -210,12 +213,13 @@ def train_GRU_RNN(
 	max_epochs=100,
 	L2_reg = 0.,
 	batchSize=100,
-	use_dropout=True
+	use_dropout=True,
+        subset_size = 1
 ):
 	options = locals().copy()
 	
 	print 'Loading data ... ',
-	trainSet, validSet, testSet = load_data(dataFile, labelFile, timeFile=timeFile)
+	trainSet, validSet, testSet = load_data(dataFile, labelFile, timeFile=timeFile, subset_size = subset_size)
 	n_batches = int(np.ceil(float(len(trainSet[0])) / float(batchSize)))
 	print 'done!!'
 
@@ -265,13 +269,14 @@ if __name__ == '__main__':
 	labelFile = sys.argv[3]
 	outFile = sys.argv[4]
         inputDimSize = int(sys.argv[5])
-        
+        subsetSize = float(sys.argv[6])
+        hiddenDimSize = int(sys.argv[7])
 
 #	inputDimSize = 570 #The number of unique medical codes
-	hiddenDimSize = 100 #The size of the hidden layer of the GRU
-	max_epochs = 100 #Maximum epochs to train
+#	hiddenDimSize = 100 #The size of the hidden layer of the GRU
+	max_epochs = 30 #Maximum epochs to train
 	L2_reg = 0.001 #L2 regularization for the logistic weight
 	batchSize = 10 #The size of the mini-batch
 	use_dropout = True #Whether to use a dropout between the GRU and the logistic layer
 
-	train_GRU_RNN(dataFile=dataFile, labelFile=labelFile, timeFile=timeFile, outFile=outFile, inputDimSize=inputDimSize, hiddenDimSize=hiddenDimSize, max_epochs=max_epochs, L2_reg=L2_reg, batchSize=batchSize, use_dropout=use_dropout)
+	train_GRU_RNN(dataFile=dataFile, labelFile=labelFile, timeFile=timeFile, outFile=outFile, inputDimSize=inputDimSize, hiddenDimSize=hiddenDimSize, max_epochs=max_epochs, L2_reg=L2_reg, batchSize=batchSize, use_dropout=use_dropout, subset_size = subsetSize)
