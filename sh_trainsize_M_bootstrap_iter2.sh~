@@ -1,0 +1,11 @@
+#!/bin/bash
+
+## 30%                                                                                                                                                                                                                                                                                  
+echo 'starting 30%'
+python gru_onehot_time.py data/2_1_outpatient_medication.p.seqs.ll data/2_1_outpatient_medication.p.times.ll data/2_1_outpatient_medication.p.labels results/2_1_outpatient_medication_hidden_93.result_trainsize_.3_iter_1 93 .3 93
+python gru_onehot_time.py data/2_1_outpatient_medication.p.seqs.ll data/2_1_outpatient_medication.p.times.ll data/2_1_outpatient_medication.p.labels results/2_1_outpatient_medication_hidden_93.result_trainsize_.3_iter_2 93 .3 93
+python gru_onehot_time.py data/2_1_outpatient_medication.p.seqs.ll data/2_1_outpatient_medication.p.times.ll data/2_1_outpatient_medication.p.labels results/2_1_outpatient_medication_hidden_93.result_trainsize_.3_iter_3 93 .3 93
+python gru_onehot_time.py data/2_1_outpatient_medication.p.seqs.ll data/2_1_outpatient_medication.p.times.ll data/2_1_outpatient_medication.p.labels results/2_1_outpatient_medication_hidden_93.result_trainsize_.3_iter_4 93 .3 93
+python gru_onehot_time.py data/2_1_outpatient_medication.p.seqs.ll data/2_1_outpatient_medication.p.times.ll data/2_1_outpatient_medication.p.labels results/2_1_outpatient_medication_hidden_93.result_trainsize_.3_iter_5 93 .3 93
+
+

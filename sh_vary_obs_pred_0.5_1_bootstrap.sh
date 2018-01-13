@@ -1,0 +1,8 @@
+#!/bin/bash
+
+python gru_onehot_time.py data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.seqs.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.times.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.labels results/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5_hidden_256.result_iter_1 518 1 256
+python gru_onehot_time.py data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.seqs.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.times.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.labels results/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5_hidden_256.result_iter_2 518 1 256
+python gru_onehot_time.py data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.seqs.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.times.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.labels results/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5_hidden_256.result_iter_3 518 1 256
+python gru_onehot_time.py data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.seqs.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.times.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.labels results/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5_hidden_256.result_iter_4 518 1 256
+python gru_onehot_time.py data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.seqs.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.times.ll data/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5.p.labels results/0.5_1_outpatient_De_V_Di_M_S_enc_cutoff_5_hidden_256.result_iter_5 518 1 256
+

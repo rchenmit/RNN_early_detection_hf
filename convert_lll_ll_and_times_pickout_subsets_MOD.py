@@ -3,10 +3,10 @@
 import numpy as np
 import cPickle as pickle
 
-file_lll_seqs = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.seqs'
-file_l_labels = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.labels'
-file_save_ll_seqs_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.seqs.ll'
-file_save_ll_t_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_70.p.times.ll'
+file_lll_seqs = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_25.p.seqs'
+file_l_labels = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_25.p.labels'
+file_save_ll_seqs_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_25.p.seqs.ll'
+file_save_ll_t_new = 'data/2_1_outpatient_De_V_Di_M_S_enc_cutoff_25.p.times.ll'
 
 
 with open(file_lll_seqs, 'rb') as f:

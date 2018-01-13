@@ -8,6 +8,8 @@ import cPickle as pickle
 from collections import OrderedDict
 from sklearn.metrics import roc_auc_score
 
+import time
+
 def unzip(zipped):
 	new_params = OrderedDict()
 	for key, value in zipped.iteritems():
@@ -107,7 +109,9 @@ def load_data(seqFile, labelFile, timeFile='', subset_size=1):
 
 	dataSize_orig = len(labels)
         dataSize = int( np.floor(len(labels) * subset_size))
+        print dataSize
 
+        np.random.seed(int(time.time()))
 	ind = np.random.permutation(dataSize_orig)
 	nTest = int(0.10 * dataSize)
 	nValid = int(0.10 * dataSize)
@@ -116,6 +120,9 @@ def load_data(seqFile, labelFile, timeFile='', subset_size=1):
 	valid_indices = ind[nTest:nTest+nValid]
 #	train_indices = ind[nTest+nValid:]
 	train_indices = ind[nTest+nValid:dataSize]
+        print "test_indices", test_indices[0:100]
+        print "valid_indices", valid_indices[0:100]
+        print "train_indices", train_indices[0:100]
 
 	train_set_x = sequences[train_indices]
 	train_set_y = labels[train_indices]
